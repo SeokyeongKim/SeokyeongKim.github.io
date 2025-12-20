@@ -2,22 +2,26 @@
 
 :root {
   /* Color Palette */
-  --md-sys-color-primary: #1a73e8; /* Google Blue */
+  --md-sys-color-primary: #1a73e8;
+  /* Google Blue */
   --md-sys-color-on-primary: #ffffff;
   --md-sys-color-surface: #ffffff;
-  --md-sys-color-on-surface: #202124; /* Google Dark Grey */
-  --md-sys-color-on-surface-variant: #5f6368; /* Google Light Grey */
+  --md-sys-color-on-surface: #202124;
+  /* Google Dark Grey */
+  --md-sys-color-on-surface-variant: #5f6368;
+  /* Google Light Grey */
   --md-sys-color-outline: #dadce0;
-  --md-sys-color-background: #f8f9fa; /* Very Light Grey Background */
-  
+  --md-sys-color-background: #f8f9fa;
+  /* Very Light Grey Background */
+
   /* Elevation / Shadows */
-  --md-sys-elevation-1: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
-  --md-sys-elevation-2: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);
+  --md-sys-elevation-1: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  --md-sys-elevation-2: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
 
   /* Typography */
   --md-sys-typescale-display-large-font: 'Google Sans', 'Roboto', sans-serif;
   --md-sys-typescale-body-font: 'Roboto', 'Arial', sans-serif;
-  
+
   /* Spacing */
   --spacing-xs: 4px;
   --spacing-s: 8px;
@@ -55,7 +59,8 @@ a:hover {
 
 /* Layout */
 .container {
-  max-width: 1000px; /* Google usually keeps content aimed at center, roughly 800-1000px readable width */
+  max-width: 1000px;
+  /* Google usually keeps content aimed at center, roughly 800-1000px readable width */
   margin: 0 auto;
   padding: 0 var(--spacing-m);
 }
@@ -68,7 +73,8 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  /* Subtle shadow */
 }
 
 .navbar-content {
@@ -91,7 +97,8 @@ a:hover {
   font-size: 0.95rem;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover,
+.nav-links a.active {
   color: var(--md-sys-color-primary);
   text-decoration: none;
 }
@@ -170,7 +177,8 @@ section {
 /* Cards (Publications, Projects) */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* Responsive grid */
   gap: var(--spacing-l);
 }
 
@@ -214,7 +222,8 @@ section {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: var(--spacing-s);
-  color: var(--md-sys-color-primary); /* Links look like links */
+  color: var(--md-sys-color-primary);
+  /* Links look like links */
 }
 
 .pub-authors {
@@ -252,7 +261,8 @@ section {
 }
 
 .chip:hover {
-  background-color: rgba(26, 115, 232, 0.08); /* Blue tint on hover */
+  background-color: rgba(26, 115, 232, 0.08);
+  /* Blue tint on hover */
   color: var(--md-sys-color-primary);
   border-color: var(--md-sys-color-primary);
 }
@@ -274,15 +284,15 @@ section {
     text-align: center;
     gap: var(--spacing-m);
   }
-  
+
   .profile-info h1 {
     font-size: 2rem;
   }
-  
+
   .publication-card {
     flex-direction: column;
   }
-  
+
   .pub-thumb {
     width: 100%;
     height: auto;
@@ -292,8 +302,44 @@ section {
   .contact-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .nav-links {
-    display: none; /* In a real implementation we'd add a hamburger menu, for now simplified */
+    display: none;
+    /* In a real implementation we'd add a hamburger menu, for now simplified */
   }
+}
+
+/* News Section */
+.news-box {
+  background-color: var(--md-sys-color-surface);
+  border: 1px solid var(--md-sys-color-outline);
+  border-radius: 12px;
+  padding: var(--spacing-l);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.news-item {
+  display: flex;
+  margin-bottom: var(--spacing-m);
+  border-bottom: 1px solid var(--md-sys-color-outline);
+  padding-bottom: var(--spacing-s);
+}
+
+.news-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.news-date {
+  font-weight: 600;
+  min-width: 100px;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 0.9rem;
+}
+
+.news-content {
+  color: var(--md-sys-color-on-surface);
+  font-size: 0.95rem;
 }
