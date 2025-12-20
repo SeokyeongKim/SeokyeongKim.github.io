@@ -377,3 +377,105 @@ section {
   color: var(--md-sys-color-on-surface);
   font-size: 0.95rem;
 }
+
+/* Landing Page / Hero Section Specifics */
+.landing-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 0;
+  /* Add generous top/bottom padding */
+  min-height: 80vh;
+  /* Takes up most of the screen */
+}
+
+.landing-container {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landing-avatar {
+  width: 150px;
+  /* Fixed: Reduced size as requested */
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--md-sys-color-outline);
+  margin-bottom: var(--spacing-l);
+  box-shadow: var(--md-sys-elevation-1);
+}
+
+.landing-name {
+  font-family: var(--md-sys-typescale-display-large-font);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--md-sys-color-on-surface);
+  margin-bottom: var(--spacing-s);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.landing-role {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--md-sys-color-primary);
+  margin-bottom: var(--spacing-l);
+}
+
+.landing-bio {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--md-sys-color-on-surface);
+  margin-bottom: var(--spacing-l);
+  max-width: 700px;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: var(--spacing-m);
+  margin: var(--spacing-l) 0;
+}
+
+.btn-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  border: 1px solid var(--md-sys-color-outline);
+}
+
+.btn-primary:hover {
+  background-color: #f1f3f4;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--md-sys-color-on-surface);
+  text-decoration: none;
+}
+
+/* Center interest chips for landing */
+.landing-interests {
+  justify-content: center;
+  margin-bottom: var(--spacing-l);
+}
+
+/* Social icons for landing */
+.landing-social {
+  margin-top: var(--spacing-xl);
+  justify-content: center;
+}
