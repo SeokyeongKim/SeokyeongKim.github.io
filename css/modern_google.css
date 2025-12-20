@@ -67,14 +67,14 @@ a:hover {
 
 /* Navbar */
 .navbar {
-  background-color: var(--md-sys-color-surface);
-  border-bottom: 1px solid var(--md-sys-color-outline);
+  background-color: #002b5c;
+  /* Dark Blue from user image */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: var(--spacing-m) 0;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  /* Subtle shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-content {
@@ -87,20 +87,23 @@ a:hover {
   font-family: var(--md-sys-typescale-display-large-font);
   font-size: 1.25rem;
   font-weight: 500;
-  color: var(--md-sys-color-on-surface-variant);
+  color: #ffffff;
+  /* White text */
 }
 
 .nav-links a {
   margin-left: var(--spacing-l);
-  color: var(--md-sys-color-on-surface-variant);
+  color: rgba(255, 255, 255, 0.9);
+  /* Off-white text */
   font-weight: 500;
   font-size: 0.95rem;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--md-sys-color-primary);
+  color: #ffffff;
   text-decoration: none;
+  opacity: 1;
 }
 
 /* Header / Profile Section */
