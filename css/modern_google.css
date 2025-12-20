@@ -127,28 +127,62 @@ a:hover {
 
 .profile-info h1 {
   font-family: var(--md-sys-typescale-display-large-font);
-  font-size: 2.5rem;
+  font-size: 3.5rem;
+  /* Larger hero size */
+  font-weight: 700;
   margin-bottom: var(--spacing-xs);
   color: var(--md-sys-color-on-surface);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
 }
 
 .profile-info h2 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  color: var(--md-sys-color-on-surface-variant);
-  margin-bottom: var(--spacing-m);
+  color: var(--md-sys-color-primary);
+  /* Use primary color for subtitle */
+  margin-bottom: var(--spacing-l);
 }
 
 .profile-bio {
   color: var(--md-sys-color-on-surface);
-  margin-bottom: var(--spacing-m);
-  max-width: 600px;
+  margin-bottom: var(--spacing-l);
+  max-width: 650px;
+  font-size: 1.05rem;
+  /* Slightly larger for readability */
+  line-height: 1.7;
+}
+
+/* Interest Chips */
+.interest-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-s);
+  margin-top: var(--spacing-s);
+}
+
+.interest-chip {
+  background-color: #e8f0fe;
+  /* Light Blue background */
+  color: var(--md-sys-color-primary);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  /* Keeps sizing consistent if border added later */
+}
+
+/* Hover effect for fun (optional) */
+.interest-chip:hover {
+  background-color: #d2e3fc;
 }
 
 .social-links {
   display: flex;
-  gap: var(--spacing-m);
-  margin-top: var(--spacing-m);
+  gap: var(--spacing-l);
+  /* Wider spacing */
+  margin-top: var(--spacing-xl);
 }
 
 .social-links a {
